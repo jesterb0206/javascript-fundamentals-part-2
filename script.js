@@ -195,40 +195,64 @@
 //   friends: ['Haneia', 'Noah', 'Rosa ❤️'],
 // };
 
+// const bradley = {
+//   firstName: 'Bradley',
+//   lastName: 'Jester',
+//   age: 26,
+//   role: 'Full Stack Developer',
+//   friends: ['Haneia', 'Noah', 'Rosa ❤️'],
+// };
+
+// console.log(bradley.lastName);
+// console.log(bradley['lastName']);
+
+// const nameKey = 'Name';
+// console.log(bradley['first' + nameKey]);
+// console.log(bradley['last' + nameKey]);
+
+// const interestedIn = prompt(
+//   'What do you want to know about Bradley? Choose between firstName, lastName, age, job, and friends.'
+// );
+
+// if (bradley[interestedIn]) {
+//   console.log(bradley[interestedIn]);
+// } else {
+//   console.log(
+//     'Not an option! Choose between firstName, lastName, age, job, and friends.'
+//   );
+// }
+
+// bradley.location = 'Seattle';
+// console.log(bradley);
+
+// // Challenge
+
+// // "Bradley has 3 friends, and his best friend is named Rosa ❤️"
+
+// console.log(
+//   `${bradley.firstName} has ${bradley.friends.length} friends, and his best friend is named ${bradley.friends[2]}`
+// );
+
 const bradley = {
   firstName: 'Bradley',
   lastName: 'Jester',
-  age: 26,
+  birthYear: 1997,
   role: 'Full Stack Developer',
   friends: ['Haneia', 'Noah', 'Rosa ❤️'],
+  hasADriverLicense: true,
+  calcAge: function () {
+    this.age = 2023 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()}-year old ${
+      bradley.role
+    }, and he has ${this.hasADriverLicense ? 'a' : 'no'} driver's license.`;
+  },
 };
 
-console.log(bradley.lastName);
-console.log(bradley['lastName']);
+console.log(bradley.calcAge());
 
-const nameKey = 'Name';
-console.log(bradley['first' + nameKey]);
-console.log(bradley['last' + nameKey]);
+console.log(bradley.age);
 
-const interestedIn = prompt(
-  'What do you want to know about Bradley? Choose between firstName, lastName, age, job, and friends.'
-);
-
-if (bradley[interestedIn]) {
-  console.log(bradley[interestedIn]);
-} else {
-  console.log(
-    'Not an option! Choose between firstName, lastName, age, job, and friends.'
-  );
-}
-
-bradley.location = 'Seattle';
-console.log(bradley);
-
-// Challenge
-
-// "Bradley has 3 friends, and his best friend is named Rosa ❤️"
-
-console.log(
-  `${bradley.firstName} has ${bradley.friends.length} friends, and his best friend is named ${bradley.friends[2]}`
-);
+console.log(bradley.getSummary());
