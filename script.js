@@ -233,26 +233,59 @@
 //   `${bradley.firstName} has ${bradley.friends.length} friends, and his best friend is named ${bradley.friends[2]}`
 // );
 
-const bradley = {
-  firstName: 'Bradley',
-  lastName: 'Jester',
-  birthYear: 1997,
-  role: 'Full Stack Developer',
-  friends: ['Haneia', 'Noah', 'Rosa ❤️'],
-  hasADriverLicense: true,
-  calcAge: function () {
-    this.age = 2023 - this.birthYear;
-    return this.age;
-  },
-  getSummary: function () {
-    return `${this.firstName} is a ${this.calcAge()}-year old ${
-      bradley.role
-    }, and he has ${this.hasADriverLicense ? 'a' : 'no'} driver's license.`;
+// const bradley = {
+//   firstName: 'Bradley',
+//   lastName: 'Jester',
+//   birthYear: 1997,
+//   role: 'Full Stack Developer',
+//   friends: ['Haneia', 'Noah', 'Rosa ❤️'],
+//   hasADriverLicense: true,
+//   calcAge: function () {
+//     this.age = 2023 - this.birthYear;
+//     return this.age;
+//   },
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge()}-year old ${
+//       bradley.role
+//     }, and he has ${this.hasADriverLicense ? 'a' : 'no'} driver's license.`;
+//   },
+// };
+
+// console.log(bradley.calcAge());
+
+// console.log(bradley.age);
+
+// console.log(bradley.getSummary());
+
+const mark = {
+  fullName: 'Mark Miller',
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
   },
 };
 
-console.log(bradley.calcAge());
+const john = {
+  fullName: 'John Smith',
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
 
-console.log(bradley.age);
+mark.calcBMI();
+john.calcBMI();
 
-console.log(bradley.getSummary());
+if (mark.bmi > john.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`
+  );
+} else if (john.bmi > mark.bmi) {
+  console.log(
+    `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`
+  );
+}
