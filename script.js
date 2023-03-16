@@ -151,26 +151,38 @@
 
 // console.log(ages);
 
-const friends = ['Haneia', 'Noah', 'Rosa ❤️'];
-const newLength = friends.push('Zachary');
-console.log(friends);
-console.log(newLength);
+// const friends = ['Haneia', 'Noah', 'Rosa ❤️'];
+// const newLength = friends.push('Zachary');
+// console.log(friends);
+// console.log(newLength);
 
-friends.unshift('Daniela');
-console.log(friends);
+// friends.unshift('Daniela');
+// console.log(friends);
 
-const pop = friends.pop();
-console.log(pop);
-console.log(friends);
+// const pop = friends.pop();
+// console.log(pop);
+// console.log(friends);
 
-friends.shift();
-console.log(friends);
+// friends.shift();
+// console.log(friends);
 
-console.log(friends.indexOf('Noah'));
+// console.log(friends.indexOf('Noah'));
 
-console.log(friends.includes('Noah'));
-console.log(friends.includes('Ben'));
+// console.log(friends.includes('Noah'));
+// console.log(friends.includes('Ben'));
 
-if (friends.includes('Haneia')) {
-  console.log('Bradley has a friend named Haneia!');
-}
+// if (friends.includes('Haneia')) {
+//   console.log('Bradley has a friend named Haneia!');
+// }
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const bills = [100, 500, 1000];
+
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+const totals = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(bills, tips, totals);
