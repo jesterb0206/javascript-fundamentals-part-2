@@ -187,6 +187,14 @@
 
 // console.log(bills, tips, totals);
 
+// const bradley = {
+//   firstName: 'Bradley',
+//   lastName: 'Jester',
+//   age: 26,
+//   role: 'Full Stack Developer',
+//   friends: ['Haneia', 'Noah', 'Rosa ❤️'],
+// };
+
 const bradley = {
   firstName: 'Bradley',
   lastName: 'Jester',
@@ -194,3 +202,33 @@ const bradley = {
   role: 'Full Stack Developer',
   friends: ['Haneia', 'Noah', 'Rosa ❤️'],
 };
+
+console.log(bradley.lastName);
+console.log(bradley['lastName']);
+
+const nameKey = 'Name';
+console.log(bradley['first' + nameKey]);
+console.log(bradley['last' + nameKey]);
+
+const interestedIn = prompt(
+  'What do you want to know about Bradley? Choose between firstName, lastName, age, job, and friends.'
+);
+
+if (bradley[interestedIn]) {
+  console.log(bradley[interestedIn]);
+} else {
+  console.log(
+    'Not an option! Choose between firstName, lastName, age, job, and friends.'
+  );
+}
+
+bradley.location = 'Seattle';
+console.log(bradley);
+
+// Challenge
+
+// "Bradley has 3 friends, and his best friend is named Rosa ❤️"
+
+console.log(
+  `${bradley.firstName} has ${bradley.friends.length} friends, and his best friend is named ${bradley.friends[2]}`
+);
