@@ -65,15 +65,44 @@
 
 // console.log(yearsUntilRetirement(1997, 'Bradley'));
 
-function cutFruit(fruit) {
-  return fruit * 5;
-}
+// function cutFruit(fruit) {
+//   return fruit * 5;
+// }
 
-function fruitProcessor(apples, oranges) {
-  const piecesOfApple = cutFruit(apples);
-  const piecesOfOrange = cutFruit(oranges);
-  const juice = `Our juice contains ${piecesOfApple} pieces of apple and ${piecesOfOrange} pieces of orange.`;
-  return juice;
-}
+// function fruitProcessor(apples, oranges) {
+//   const piecesOfApple = cutFruit(apples);
+//   const piecesOfOrange = cutFruit(oranges);
+//   const juice = `Our juice contains ${piecesOfApple} pieces of apple and ${piecesOfOrange} pieces of orange.`;
+//   return juice;
+// }
 
-console.log(fruitProcessor(2, 3));
+// console.log(fruitProcessor(2, 3));
+
+// Coding Challenge #1
+
+const calcAverage = (a, b, c) => (a + b + c) / 3;
+
+// Test 1
+
+let dolphinScore = calcAverage(11, 22, 33);
+let koalaScore = calcAverage(44, 55, 66);
+
+const checkWinner = function (avgDolphin, avgKoala) {
+  if (avgDolphin >= 2 * avgKoala) {
+    console.log(`Dolphins win 🏆 (${avgDolphin} to ${avgKoala})`);
+  } else if (avgKoala >= 2 * avgDolphin) {
+    console.log(`Koalas win 🏆 (${avgKoala} to ${avgDolphin})`);
+  } else {
+    console.log('No team wins ...');
+  }
+};
+
+checkWinner(dolphinScore, koalaScore);
+checkWinner(1111, 2222);
+
+// Test 2
+
+dolphinScore = calcAverage(88, 44, 22);
+koalaScore = calcAverage(44, 22, 11);
+
+checkWinner(dolphinScore, koalaScore);
