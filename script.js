@@ -78,31 +78,75 @@
 
 // console.log(fruitProcessor(2, 3));
 
-// Coding Challenge #1
+// // Coding Challenge #1
 
-const calcAverage = (a, b, c) => (a + b + c) / 3;
+// const calcAverage = (a, b, c) => (a + b + c) / 3;
 
-// Test 1
+// // Test 1
 
-let dolphinScore = calcAverage(11, 22, 33);
-let koalaScore = calcAverage(44, 55, 66);
+// let dolphinScore = calcAverage(11, 22, 33);
+// let koalaScore = calcAverage(44, 55, 66);
 
-const checkWinner = function (avgDolphin, avgKoala) {
-  if (avgDolphin >= 2 * avgKoala) {
-    console.log(`Dolphins win 🏆 (${avgDolphin} to ${avgKoala})`);
-  } else if (avgKoala >= 2 * avgDolphin) {
-    console.log(`Koalas win 🏆 (${avgKoala} to ${avgDolphin})`);
-  } else {
-    console.log('No team wins ...');
-  }
+// const checkWinner = function (avgDolphin, avgKoala) {
+//   if (avgDolphin >= 2 * avgKoala) {
+//     console.log(`Dolphins win 🏆 (${avgDolphin} to ${avgKoala})`);
+//   } else if (avgKoala >= 2 * avgDolphin) {
+//     console.log(`Koalas win 🏆 (${avgKoala} to ${avgDolphin})`);
+//   } else {
+//     console.log('No team wins ...');
+//   }
+// };
+
+// checkWinner(dolphinScore, koalaScore);
+// checkWinner(1111, 2222);
+
+// // Test 2
+
+// dolphinScore = calcAverage(88, 44, 22);
+// koalaScore = calcAverage(44, 22, 11);
+
+// checkWinner(dolphinScore, koalaScore);
+
+const friends = ['Haneia', 'Noah', 'Rosa ❤️'];
+
+console.log(friends);
+
+const years = new Array(1969, 1970, 1997, 2000, 2001);
+
+console.log(friends[0]);
+
+console.log(friends.length);
+
+console.log(friends[friends.length - 1]);
+
+friends[2] = 'Rosalinda ❤️';
+
+console.log(friends);
+
+const bradley = ['Bradley', 'Jester', '26', 'Full Stack Developer', friends];
+
+console.log(bradley);
+
+const calcAge = function (birthYear) {
+  return 2023 - birthYear;
 };
 
-checkWinner(dolphinScore, koalaScore);
-checkWinner(1111, 2222);
+const birthYears = [1969, 1970, 1997, 2000, 2001];
 
-// Test 2
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[2]);
+const age4 = calcAge(years[3]);
+const age5 = calcAge(years[birthYears.length - 1]);
 
-dolphinScore = calcAverage(88, 44, 22);
-koalaScore = calcAverage(44, 22, 11);
+console.log(age1, age2, age3, age4, age5);
 
-checkWinner(dolphinScore, koalaScore);
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[2]),
+  calcAge(years[3]),
+  calcAge(years[birthYears.length - 1]),
+];
+
+console.log(ages);
