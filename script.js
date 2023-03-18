@@ -343,22 +343,40 @@
 //   console.log(bradley[i], typeof bradley[i]);
 // }
 
-const bradley = [
-  'Bradley',
-  'Jester',
-  26,
-  'Full Stack Developer',
-  ['Haneia', 'Noah', 'Rosa'],
-  true,
-];
+// const bradley = [
+//   'Bradley',
+//   'Jester',
+//   26,
+//   'Full Stack Developer',
+//   ['Haneia', 'Noah', 'Rosa'],
+//   true,
+// ];
 
-for (let i = bradley.length - 1; i >= 0; i--) {
-  console.log(i, bradley[i]);
+// for (let i = bradley.length - 1; i >= 0; i--) {
+//   console.log(i, bradley[i]);
+// }
+
+// for (let exercise = 1; exercise < 4; exercise++) {
+//   console.log(`Starting exercise ${exercise}`);
+//   for (let rep = 1; rep < 6; rep++) {
+//     console.log(`Exercise #${exercise}: Bench press repetition #${rep} 🏋️‍♀️`);
+//   }
+// }
+
+for (let rep = 1; rep <= 10; rep++) {
+  console.log(`Bench press repetition #${rep} 🏋️‍♀️`);
 }
 
-for (let exercise = 1; exercise < 4; exercise++) {
-  console.log(`Starting exercise ${exercise}`);
-  for (let rep = 1; rep < 6; rep++) {
-    console.log(`Exercise #${exercise}: Bench press repetition #${rep} 🏋️‍♀️`);
-  }
+let rep = 1;
+
+while (rep <= 10) {
+  rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log('Finished!');
 }
