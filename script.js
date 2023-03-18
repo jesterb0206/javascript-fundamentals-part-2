@@ -301,6 +301,44 @@
 // console.log('Lifting weights repetition 9 🏋️‍♀️');
 // console.log('Lifting weights repetition 10 🏋️‍♀️');
 
-for (let rep = 1; rep <= 30; rep++) {
-  console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+// for (let rep = 1; rep <= 30; rep++) {
+//   console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
+// }
+
+const bradley = [
+  'Bradley',
+  'Jester',
+  26,
+  'Full Stack Developer',
+  ['Haneia', 'Noah', 'Rosa'],
+  true,
+];
+
+const types = [];
+
+for (let i = 0; i < bradley.length; i++) {
+  console.log(bradley[i], typeof bradley[i]);
+  types.push(typeof bradley[i]);
+}
+
+console.log(types);
+
+const years = [1969, 1970, 1997, 2000];
+
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2023 - years[i]);
+}
+
+console.log(ages);
+
+for (let i = 0; i < bradley.length; i++) {
+  if (typeof bradley[i] !== 'string') continue;
+  console.log(bradley[i], typeof bradley[i]);
+}
+
+for (let i = 0; i < bradley.length; i++) {
+  if (typeof bradley[i] === 'number') break;
+  console.log(bradley[i], typeof bradley[i]);
 }
